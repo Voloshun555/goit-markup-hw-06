@@ -419,7 +419,11 @@ box-shadow 250ms var(--cubic-brauser);
   display: flex;
   justify-content: center;
   justify-content: space-between;
-  padding: 8px 16px 0px;
+
+  margin-top: 8px;
+
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .link-networks {
@@ -868,7 +872,19 @@ letter-spacing: 0.06em;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: box-shadow 250ms var(--cubic-brauser), 
+  background-color 250ms var(--cubic-brauser);
 }
+
+.close-modal:hover,
+.close-modal:focus{
+background-color: #E7E9FC;
+box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+border-radius: 50%;
+border: transparent;
+}
+
 
 .modal-form{
   display: flex;
@@ -890,11 +906,13 @@ letter-spacing: 0.02em;
 color: #2E2F42;
 
 }
+
+
 .modal-form-input{
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
-padding-left: 30px;
+padding-left: 34px;
 padding-top: 8px;
 padding-bottom: 8px;
 padding-right: 15px;
@@ -932,9 +950,8 @@ margin-bottom: 4px;
 .modal-form-icon{
   position: absolute;
   top: 50%;
-  left: 0;
   left: 16px;
-  
+
   fill: currentColor;
   
   transform: translate(0,-50%);
@@ -942,6 +959,8 @@ margin-bottom: 4px;
 }
 
 .modal-form-comment{
+display: block;
+
   padding-left: 16px;
   padding-top: 8px;
   padding-right: 16px;
@@ -950,7 +969,7 @@ margin-bottom: 4px;
   height: 120px;
 
 border-radius: 4px;
-  transition: color 250ms var(--cubic-brauser);
+transition: color 250ms var(--cubic-brauser);
 }
 
 .modal-form-comment::placeholder{
@@ -985,6 +1004,7 @@ margin-right: 8px;
   background-image: url(../images/CheckDrop.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  border: transparent;
 }
 
 .modal-form-check-desc{
@@ -994,7 +1014,7 @@ font-size: 12px;
 line-height: 1.33;
 letter-spacing: 0.04em;
 
-margin-top: 26px;
+margin-top: 8px;
 margin-bottom: 24px;
 
 color: #757575;
